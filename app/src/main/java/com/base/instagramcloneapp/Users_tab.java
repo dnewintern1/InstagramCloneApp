@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +30,8 @@ public class Users_tab extends Fragment {
 
     private UserAdapter mArrayAdapter;
 
+    private TextView loading_mssg;
+
 
     public Users_tab(){
 
@@ -45,6 +48,7 @@ public class Users_tab extends Fragment {
 
         listVIew = view.findViewById(R.id.listVIew);
         arrayList =new ArrayList<>();
+        loading_mssg = view.findViewById(R.id.loading_mssg);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference usersRef = database.getReference("Users");
@@ -67,6 +71,8 @@ public class Users_tab extends Fragment {
                 // Create an ArrayAdapter to populate the ListView
                 UserAdapter adapter = new UserAdapter(getContext(), R.layout.user_list_item, arrayList);
                 listVIew.setAdapter(adapter);
+                loading_mssg.animate().alpha(0).setDuration(2000);
+                listVIew.setVisibility(view.VISIBLE);
             }
 
             @Override

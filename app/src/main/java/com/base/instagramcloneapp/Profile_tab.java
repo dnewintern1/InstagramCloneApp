@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +32,7 @@ public class Profile_tab extends Fragment {
     private Button UpdateInfobtn;
     FirebaseUser firebaseUser;
 
+
     private FirebaseAuth auth;
 
     public Profile_tab(){
@@ -51,6 +53,9 @@ public class Profile_tab extends Fragment {
         your_profession = view.findViewById(R.id.your_profession);
         hobbies = view.findViewById(R.id.hobbies);
         fav_sport = view.findViewById(R.id.fav_sport);
+
+
+
 
 
         UpdateInfobtn = view.findViewById(R.id.UpdateInfobtn);
