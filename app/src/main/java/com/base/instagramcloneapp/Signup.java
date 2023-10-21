@@ -58,6 +58,7 @@ public class Signup extends AppCompatActivity {
                             else {
                                 Toast.makeText(Signup.this, "Signup failed" + task.getException().getMessage() , Toast.LENGTH_SHORT).show();
                             }
+
                         }
                     });
 

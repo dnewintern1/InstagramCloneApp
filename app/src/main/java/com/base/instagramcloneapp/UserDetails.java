@@ -3,40 +3,39 @@ package com.base.instagramcloneapp;
 import android.widget.RadioButton;
 
 public class UserDetails {
-    private String firstName;
-    private String lastName;
-    private String phoneNo;
+    private String profileName;
+    private String yourBio;
+    private String yourProfession;
+    private String yourHobbies;
+    private String favSport;
 
+    public UserDetails(String profileName, String yourBio, String yourProfession, String yourHobbies, String favSport) {
+        this.profileName = profileName;
+        this.yourBio = yourBio;
+        this.yourProfession = yourProfession;
+        this.yourHobbies = yourHobbies;
+        this.favSport = favSport;
+    }
 
     public UserDetails(){};
 
-    public UserDetails(String firstName, String lastName, String phoneNo) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNo = phoneNo;
+    public String getProfileName() {
+        return profileName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getYourBio() {
+        return yourBio;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public String getYourProfession() {
+        return yourProfession;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getYourHobbies() {
+        return yourHobbies;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhoneNo() {
-        return phoneNo;
-    }
-
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public String getFavSport() {
+        return favSport;
     }
 }
